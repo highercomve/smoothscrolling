@@ -603,7 +603,7 @@ a {
 .full-height {
   padding-top: 80px;
   height: 100%;
-  min-height: 640px;
+  min-height:600px;
 }
 #home {
   background-color: #BEBEBF;
