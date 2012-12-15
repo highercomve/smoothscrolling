@@ -1,3 +1,10 @@
+/*
+Author: highercomve (Sergio Marin)
+
+Licencia MIT
+
+*/
+
 (function( $ ){
 
   $.fn.smoothscrolling = function(options) {
