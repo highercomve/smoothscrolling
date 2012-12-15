@@ -42,3 +42,18 @@ Para activar el plugin usamos
   });
   
 ```
+
+En caso de necesitar un offset distintos por cada enlace, se puede usar el parametro *data-offset-top* en el enlace para definir su offset
+
+```html
+<ul class="nav">
+  <li><a href="#home">Inicio</a></li>
+  <li><a href="#nosotros" data-offset-top="80">Nosotros</a></li>
+  <li><a href="#contacto">Contacto</a></li>
+</ul>
+```
+
+## Licencia
+
+Licencia MIT
+Author: Sergio Marin

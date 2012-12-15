@@ -1,6 +1,6 @@
 (function( $ ){
 
-  $.fn.smoothscrolling = function( options) {
+  $.fn.smoothscrolling = function(options) {
 
     var settings = $.extend( {
       'offsetTop'         : '0'
@@ -36,17 +36,20 @@
     return this.each(function () {
       var thisPath = filterPath(this.pathname) || locationPath;
       if (locationPath == thisPath && (location.hostname == this.hostname || !this.hostname) && this.hash.replace(/#/, '')) {
-      var $target = $(this.hash),
-           target = this.hash;
-      if (target) {
-        var targetOffset = $target.offset().top - settings.offsetTop;
-        $(this).on('click', function (event) {
-          event.preventDefault();
-          $(scrollElem).animate({
-            scrollTop: targetOffset
-          }, 800);
-        });
-      }
+        var $target = $(this.hash),
+             target = this.hash;
+        if (target) {
+          var $this = $(this),
+              offsetTop = ($this.data('offsetTop')) ? $this.data('offsetTop'):settings.offsetTop;
+
+          var targetOffset = $target.offset().top - offsetTop;
+          $this.on('click', function (event) {
+            event.preventDefault();
+            $(scrollElem).animate({
+              scrollTop: targetOffset
+            }, 800);
+          });
+        }
      }
    });
   };
