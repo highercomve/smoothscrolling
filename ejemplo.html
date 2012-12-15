@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    Ejemplo de smoothscrolling
+  </title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="fixed header">
+    <div class="container">
+      <div class="row">
+        <div class="grid4">
+          <h1 class="site-name mt10">SmoothScrolling</h1>
+        </div>
+        <div class="grid8">
+          <ul id="main_menu" class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="home" class="full-height">
+    <div class="container">
+      <div class="row">
+        <div class="grid12">
+          <h2>Titulo del Home</h2>
+          <img src="http://placehold.it/940x300" alt="">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat ab accusamus suscipit atque distinctio quaerat magni? Perferendis quas dicta atque quisquam ratione officiis voluptates excepturi cupiditate iure repellendus porro iste.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat ab accusamus suscipit atque distinctio quaerat magni? Perferendis quas dicta atque quisquam ratione officiis voluptates excepturi cupiditate iure repellendus porro iste.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="servicios" class="full-height">
+    <div class="container">
+      <div class="row">
+        <div class="grid12">
+          <h2>Titulo del Servicios</h2>
+          <img src="http://placehold.it/940x300" alt="">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat ab accusamus suscipit atque distinctio quaerat magni? Perferendis quas dicta atque quisquam ratione officiis voluptates excepturi cupiditate iure repellendus porro iste.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat ab accusamus suscipit atque distinctio quaerat magni? Perferendis quas dicta atque quisquam ratione officiis voluptates excepturi cupiditate iure repellendus porro iste.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="nosotros" class="full-height">
+    <div class="container">
+      <div class="row">
+        <div class="grid12">
+          <h2>Titulo del Nosotros</h2>
+          <img src="http://placehold.it/940x300" alt="">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat ab accusamus suscipit atque distinctio quaerat magni? Perferendis quas dicta atque quisquam ratione officiis voluptates excepturi cupiditate iure repellendus porro iste.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat ab accusamus suscipit atque distinctio quaerat magni? Perferendis quas dicta atque quisquam ratione officiis voluptates excepturi cupiditate iure repellendus porro iste.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="smoothscrolling.jquery.js"></script>
+  <script>
+  $(function() {
+    $(".menu a").smoothscrolling();
+  })
+  </script>
+</body>
+</html>
