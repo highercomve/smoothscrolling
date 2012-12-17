@@ -5,7 +5,7 @@ Licencia MIT
 
 */
 
-(function( $ ){
+(function( $ , window, document, undefined){
 
   $.fn.smoothscrolling = function(options) {
 
@@ -13,8 +13,8 @@ Licencia MIT
       'offsetTop'         : '0'
     }, options);
 
-    var locationPath = filterPath(location.pathname);
-    var scrollElem = scrollableElement('html', 'body');
+    var locationPath = filterPath(location.pathname),
+        scrollElem = scrollableElement('html', 'body');
         
     function filterPath(string) {
       return string.replace(/^\//, '')
@@ -46,7 +46,7 @@ Licencia MIT
         var $target = $(this.hash),
              target = this.hash;
         if (target) {
-          var $this = $(this),
+          var $this = $(this), // this inside each referd to dom element thats why use $(this)
               offsetTop = ($this.data('offsetTop')) ? $this.data('offsetTop'):settings.offsetTop;
 
           var targetOffset = $target.offset().top - offsetTop;
@@ -57,7 +57,7 @@ Licencia MIT
             }, 800);
           });
         }
-     }
-   });
+      }
+    });
   };
-})( jQuery );
+})( jQuery, window, document);
