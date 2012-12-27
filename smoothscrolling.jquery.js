@@ -10,7 +10,8 @@ Licencia MIT
   $.fn.smoothscrolling = function(options) {
 
     var settings = $.extend( {
-      'offsetTop'         : '0'
+      'offsetTop' : 0,
+      'speed'     : 800
     }, options);
 
     var locationPath = filterPath(location.pathname),
@@ -54,7 +55,7 @@ Licencia MIT
             event.preventDefault();
             $(scrollElem).animate({
               scrollTop: targetOffset
-            }, 800);
+            }, settings.speed);
           });
         }
       }
