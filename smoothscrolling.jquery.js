@@ -1,8 +1,7 @@
 /*
+Plugin Name: smoothscrolling
 Author: highercomve (Sergio Marin)
-
-Licencia MIT
-
+license: MIT
 */
 
 (function( $ , window, document, undefined){
