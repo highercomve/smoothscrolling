@@ -52,9 +52,12 @@ n();return d?d.promise(g):g}})(jQuery);
              target = this.hash;
         if (target) {
           var $this = $(this), // this inside each referd to dom element thats why use $(this)
-              offsetTop = ($this.data('offsetTop')) ? $this.data('offsetTop'):settings.offsetTop;
+              offsetTop = ($this.data('offsetTop')) ? $this.data('offsetTop'):settings.offsetTop,
+              targetOffset;
 
-          var targetOffset = $target.offset().top - offsetTop;
+          $(scrollElem).imagesLoaded(function() {
+            targetOffset = $target.offset().top - offsetTop;
+          });
           $this.on('click', function (event) {
             event.preventDefault();
             $(scrollElem).animate({
