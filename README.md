@@ -42,7 +42,7 @@ Para activar el plugin usamos
   });
   // En caso de necesitar que el scroll sea aplicado a un div especifico
   $("a.scroller").smoothscrolling({ 
-    container: 'div#id' // cantidad de pixeles que tiene el elemento flotante
+    container: 'div#id' // selector del contenedor 
   });
 ```
 
