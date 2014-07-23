@@ -40,7 +40,10 @@ Para activar el plugin usamos
   $("a.scroller").smoothscrolling({ 
     offsetTop: 60 // cantidad de pixeles que tiene el elemento flotante
   });
-  
+  // En caso de necesitar que el scroll sea aplicado a un div especifico
+  $("a.scroller").smoothscrolling({ 
+    container: 'div#id' // cantidad de pixeles que tiene el elemento flotante
+  });
 ```
 
 En caso de necesitar un offset distintos por cada enlace, se puede usar el parametro *data-offset-top* en el enlace para definir su offset
